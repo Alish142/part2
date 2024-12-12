@@ -1,0 +1,65 @@
+ion-header {
+  ion-toolbar {
+    background: var(--secondary-color);
+    color: rgb(202, 220, 197);
+  }
+}
+
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  padding: 0; 
+  background-color: var(--light-color); 
+
+  .container {
+   ion-content {
+  
+  justify-content: center; 
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  padding: 0; /* Remove any default padding from ion-content */
+  background-color: var(--light-color); /* Light background color for contrast */
+
+ 
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    ion-item {
+      --background: #f4f4f4; 
+      --border-radius: 10px; /* Rounded corners for input fields */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for inputs */
+      margin-bottom: 15px;
+    }
+
+    .error-message {
+      color: red; /* Highlight errors in red */
+      font-size: 0.9rem;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    ion-button {
+      background: var(--primary-color); /* Lime button */
+      border-radius: 20px; /* Rounded corners for button */
+      color: white; /* White text */
+      box-shadow: 0 6px 15px rgba(50, 205, 50, 0.3); /* Subtle shadow */
+      margin-top: 10px;
+    }
+  }
+}
+
+    width: 100%;
+
+    max-width: 400px; /* Restrict container width on larger screens */
+    padding: 50px;
+    background: white; /* White background for the container */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+ 
+}
