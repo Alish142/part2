@@ -1,0 +1,97 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+:root {
+    --ion-color-primary: #32cd32; /* Lime color */
+    --ion-color-secondary: #222; /* Dark secondary for contrast */
+    --ion-color-light: #f4f4f4; /* Light background */
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif; /* Modern font */
+    background-color: var(--ion-color-light);
+  }
+  
+  ion-toolbar {
+    background: var(--ion-color-secondary);
+    color: white;
+  }
+  
+  ion-button {
+    background: var(--ion-color-primary);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(50, 205, 50, 0.3);
+  }
+  
+  ion-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+  }
+  
+  ion-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  h1, h2 {
+    color: var(--ion-color-secondary);
+  }
+  
+  ion-content {
+    padding: 16px;
+  }
+  
+  ion-list {
+    background: var(--ion-color-light);
+  }
+  
+  ion-item {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: white;
+  }
+
+  ion-router-outlet {
+    height: 100%;
+  }
+  
+  
