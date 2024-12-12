@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Workout Plan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ng-container *ngIf="workoutPlan; else errorTemplate">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ workoutPlan.fitness_program }}</ion-card-title>
+        <ion-card-subtitle>{{ workoutPlan.day }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>
+              <h2>Exercise</h2>
+              <p>{{ workoutPlan.exercise_name }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <h2>Description</h2>
+              <p>{{ workoutPlan.description }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <h2>Sets</h2>
+              <p>
+                <ion-chip *ngFor="let set of workoutPlan.sets" color="primary">
+                  {{ set }} reps
+                </ion-chip>
+              </p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+
+  <ng-template #errorTemplate>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Error</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ error }}</p>
+        <ion-button expand="block" (click)="loadWorkoutPlan()">Retry</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+</ion-content>
+
